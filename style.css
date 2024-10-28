@@ -1,0 +1,95 @@
+* {
+  padding: 0%;
+  margin: 0%;
+}
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0px 20px;
+  height: 10vh;
+  box-shadow: 0px 3px rgba(0, 0, 0, 0.5);
+}
+nav {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+nav a {
+  text-decoration: none;
+  color: black;
+  /* transition-property: all; */
+  /* transition-duration: 2s; */
+  /* transition-duration: 1s; */
+  /* transition-timing-function: all; */
+  transition: all 500ms linear;
+}
+
+nav a:hover {
+  font-size: 18px;
+  color: brown;
+}
+.hero {
+  /* background-color: whitesmoke; */
+  background-color: #237896;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 90vh;
+}
+.herotext,
+.heroimage {
+  width: 45%;
+  height: 70%;
+}
+.heroimage {
+  background-image: url(img/myfine\ image.jpg);
+  background-position: center;
+  background-size: cover;
+}
+.movingtext {
+  font-size: 30px;
+  position: absolute;
+  height: 70%;
+  animation-name: moving;
+  animation-duration: 20s;
+  animation-fill-mode: forwards;
+  animation-iteration-count: infinite;
+}
+.herotext{
+    display: grid;
+    align-content: center;
+    gap: 20px;
+    animation-name: dropdown;
+    animation-duration: 5s;
+    animation-fill-mode: forwards;
+    
+}
+.herotext h1{
+font-size: 25px;
+}
+.herotext p{
+    line-height: 20px;
+}
+.herotext button{
+    padding: 15 0px;
+    background: none;
+    border: 1px solid white;
+}
+
+@keyframes moving {
+  from {
+    transform: translateX(-500px);
+  }
+  to {
+    transform: translateX(1550px);
+  }
+}
+@keyframes dropdown {
+  from {
+    transform: translateY(-500px);
+  }
+  to {
+    transform: translate(0);
+  }
+}
